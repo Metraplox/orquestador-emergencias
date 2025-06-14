@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ms-incidentes-config
+  namespace: emergencias
+  labels:
+    app: ms-incidentes
+data:
+  NODE_ENV: "production"
+  PORT: "3001"
+  RABBITMQ_URL: "amqp://rabbitmq:5672"
+  MONGODB_URI: "mongodb://mongodb:27017/emergencias"
+  LOG_LEVEL: "info"
